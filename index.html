@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Translator — AI dubbing for TikTok videos</title>
+  <meta name="description" content="Personal tool to dub TikTok videos into multiple languages using AI voice cloning and translation.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #111; margin: 0; background: #fff; }
+    header { display: flex; align-items: center; gap: 12px; padding: 16px 24px; border-bottom: 1px solid #eee; background: #fafafa; }
+    header img.logo { width: 40px; height: 40px; border-radius: 8px; }
+    header .brand { font-weight: 600; font-size: 18px; }
+    header nav { margin-left: auto; display: flex; gap: 16px; }
+    header nav a { color: #555; text-decoration: none; font-size: 14px; }
+    header nav a:hover { color: #000; text-decoration: underline; }
+    main { max-width: 760px; margin: 0 auto; padding: 32px 24px 64px; }
+    h1 { font-size: 32px; margin: 8px 0 16px; display: flex; align-items: center; gap: 12px; }
+    h1 img { width: 48px; height: 48px; border-radius: 10px; }
+    h2 { font-size: 22px; margin-top: 32px; }
+    .hero { color: #333; font-size: 17px; }
+    .features { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+    .feature { padding: 16px; background: #f6f7f9; border-radius: 10px; }
+    .feature h3 { margin: 0 0 6px; font-size: 16px; }
+    .feature p { margin: 0; font-size: 14px; color: #555; }
+    .note { background: #fff7e6; border-left: 4px solid #ffb84d; padding: 12px 14px; border-radius: 6px; font-size: 14px; color: #4a3a00; }
+    footer { border-top: 1px solid #eee; padding: 20px 24px; font-size: 13px; color: #777; text-align: center; }
+    footer a { color: #555; }
+    @media (max-width: 560px) {
+      .features { grid-template-columns: 1fr; }
+      h1 { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="icon.png" alt="Translator app icon" class="logo">
+    <span class="brand">Translator</span>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1><img src="icon.png" alt="Translator logo"> Translator</h1>
+    <p class="hero">Personal tool to dub TikTok videos into multiple languages using AI translation and voice cloning. Paste a TikTok URL, pick target languages, get back a dubbed MP4 ready to post.</p>
+
+    <div class="note">
+      <strong>Personal project.</strong> Translator is a single-developer, non-commercial tool built for personal use and small-scale experimentation. It is not a public service or a multi-tenant product.
+    </div>
+
+    <h2>What it does</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Transcribe</h3>
+        <p>Uses OpenAI Whisper to transcribe the original audio with word-level timing.</p>
+      </div>
+      <div class="feature">
+        <h3>Translate</h3>
+        <p>Translates the transcript into your selected European language with GPT‑4o.</p>
+      </div>
+      <div class="feature">
+        <h3>Voice clone</h3>
+        <p>Synthesises the dub using ElevenLabs voice cloning so the new voice matches the original speaker.</p>
+      </div>
+      <div class="feature">
+        <h3>TikTok drafts</h3>
+        <p>Uploads the dubbed MP4 directly to your TikTok Drafts via the Content Posting API.</p>
+      </div>
+    </div>
+
+    <h2>How it uses TikTok</h2>
+    <p>Translator connects to TikTok with the <code>user.info.basic</code> and <code>video.upload</code> scopes only. It reads your basic profile to confirm the connection, and writes dubbed MP4 files to your TikTok Drafts inbox. It never reads, modifies, or deletes existing content on your TikTok account.</p>
+
+    <h2>Legal</h2>
+    <p>By using Translator you agree to the <a href="terms.html">Terms of Service</a> and the <a href="privacy.html">Privacy Policy</a>.</p>
+
+    <h2>Contact</h2>
+    <p>Questions or data requests: <a href="mailto:btorjea@gmail.com">btorjea@gmail.com</a></p>
+  </main>
+
+  <footer>
+    &copy; 2026 Translator &middot; <a href="terms.html">Terms</a> &middot; <a href="privacy.html">Privacy</a>
+  </footer>
+</body>
+</html>

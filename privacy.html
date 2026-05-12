@@ -1,31 +1,191 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Translator – Privacy Policy</title>
-<meta name="tiktok-developers-site-verification" content="WqtF3yz1jeNaZ95zNgRBzqeSiuHaRmxk">
-<style>body{font-family:system-ui,sans-serif;max-width:720px;margin:40px auto;padding:0
-20px;line-height:1.5}</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Privacy Policy — Translator</title>
+  <meta name="description" content="Privacy Policy for the Translator personal TikTok dubbing tool.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #111; margin: 0; background: #fff; }
+    header { display: flex; align-items: center; gap: 12px; padding: 16px 24px; border-bottom: 1px solid #eee; background: #fafafa; }
+    header img.logo { width: 40px; height: 40px; border-radius: 8px; }
+    header .brand { font-weight: 600; font-size: 18px; }
+    header nav { margin-left: auto; display: flex; gap: 16px; }
+    header nav a { color: #555; text-decoration: none; font-size: 14px; }
+    header nav a:hover { color: #000; text-decoration: underline; }
+    main { max-width: 760px; margin: 0 auto; padding: 24px; }
+    h1 { display: flex; align-items: center; gap: 12px; font-size: 28px; margin-top: 8px; }
+    h1 img { width: 44px; height: 44px; border-radius: 9px; }
+    h2 { font-size: 19px; margin-top: 28px; }
+    .meta { color: #777; font-size: 13px; margin-bottom: 24px; }
+    table { border-collapse: collapse; margin: 12px 0; width: 100%; font-size: 14px; }
+    th, td { text-align: left; padding: 8px 10px; border: 1px solid #e5e5e5; vertical-align: top; }
+    th { background: #fafafa; }
+    code { background: #f4f4f4; padding: 1px 5px; border-radius: 4px; font-size: 13px; }
+    footer { border-top: 1px solid #eee; padding: 20px 24px; font-size: 13px; color: #777; text-align: center; }
+    footer a { color: #555; }
+  </style>
 </head>
 <body>
-<h1>Privacy Policy</h1>
-<p><em>Last updated: 2026-04-28</em></p>
-<h2>What we collect</h2>
-<ul>
-<li>A TikTok OAuth access token and refresh token, stored locally on the user's machine in
-<code>tiktok_tokens.json</code>. Used only to upload videos to the authenticated TikTok account.</li>
-<li>The video files the user produces, stored locally on the user's machine.</li>
-</ul>
-<h2>What we share</h2>
-<p>Nothing. Tokens never leave the user's machine. Videos are sent only to TikTok, at the user's explicit
-request.</p>
-<h2>Retention</h2>
-<p>Tokens are kept until the user deletes <code>tiktok_tokens.json</code> or revokes the application's
-access from TikTok account settings.</p>
-<h2>Third parties</h2>
-<p>The app calls the TikTok API on the user's behalf. No analytics, tracking, or third-party services are
-used.</p>
-<h2>Contact</h2>
-<p>btorjea@gmail.com</p>
+  <header>
+    <img src="icon.png" alt="Translator app icon" class="logo">
+    <span class="brand">Translator</span>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1><img src="icon.png" alt="Translator logo"> Privacy Policy</h1>
+    <p class="meta">Last updated: 12 May 2026</p>
+
+    <p>This Privacy Policy explains how Translator ("the Service", "we", "our") collects, uses, stores, and shares personal information when you use it. Translator is a personal, non-commercial tool operated by an individual developer based in Romania. The data controller for purposes of the EU General Data Protection Regulation (GDPR) is the developer of the Service, contactable at <a href="mailto:btorjea@gmail.com">btorjea@gmail.com</a>.</p>
+
+    <h2>1. Information we collect</h2>
+    <p>Translator collects only the minimum information necessary to provide the dubbing and TikTok upload functionality:</p>
+
+    <table>
+      <thead>
+        <tr><th>Category</th><th>What</th><th>Source</th><th>Why</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Account</td>
+          <td>Email address, hashed password</td>
+          <td>You, at sign-up</td>
+          <td>Authenticate you to the Service</td>
+        </tr>
+        <tr>
+          <td>TikTok identity</td>
+          <td>TikTok <code>open_id</code>, granted scopes, access &amp; refresh tokens</td>
+          <td>TikTok OAuth, after you click "Connect TikTok"</td>
+          <td>Upload dubbed videos to your TikTok Drafts</td>
+        </tr>
+        <tr>
+          <td>Job content</td>
+          <td>Source TikTok URL, downloaded video, extracted audio, transcript, translated transcript, generated dub audio, final MP4</td>
+          <td>You, when you submit a dubbing job</td>
+          <td>Produce the dubbed video you requested</td>
+        </tr>
+        <tr>
+          <td>Operational logs</td>
+          <td>Timestamps, job status, error messages</td>
+          <td>The Service</td>
+          <td>Debug and improve reliability</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Translator does <strong>not</strong> collect: payment information, location, contacts, browsing history, advertising identifiers, or any data about other TikTok users.</p>
+
+    <h2>2. TikTok scopes and data accessed</h2>
+    <p>When you connect your TikTok account, the Service requests only these scopes:</p>
+    <ul>
+      <li><code>user.info.basic</code> — read your basic profile (open id, display name, avatar) to confirm the connection in the UI.</li>
+      <li><code>video.upload</code> — upload a dubbed MP4 to your TikTok Drafts inbox. You explicitly publish the draft yourself from within TikTok; the Service never publishes on your behalf.</li>
+    </ul>
+    <p>Translator does not read your videos, followers, analytics, direct messages, or any other TikTok data, and cannot modify or delete existing content on your TikTok account.</p>
+
+    <h2>3. How we use information</h2>
+    <p>Personal information is used exclusively to:</p>
+    <ul>
+      <li>authenticate you and protect your account;</li>
+      <li>execute the dubbing job you submit (download, transcribe, translate, synthesise, mux);</li>
+      <li>upload the resulting MP4 to your TikTok Drafts at your request;</li>
+      <li>refresh expired TikTok tokens;</li>
+      <li>maintain operational logs for debugging.</li>
+    </ul>
+    <p>We do not use your data for advertising, profiling, automated decision-making with legal effects, or training AI models.</p>
+
+    <h2>4. Legal bases for processing (GDPR)</h2>
+    <ul>
+      <li><strong>Performance of a contract</strong> (Art. 6(1)(b)) — running the dubbing job and the TikTok upload you requested.</li>
+      <li><strong>Consent</strong> (Art. 6(1)(a)) — connecting your TikTok account via OAuth.</li>
+      <li><strong>Legitimate interests</strong> (Art. 6(1)(f)) — basic logging to keep the Service reliable and secure.</li>
+    </ul>
+
+    <h2>5. Third-party processors</h2>
+    <p>To produce the dubbed video, Translator transmits parts of your content to the following processors, each under their own privacy terms:</p>
+    <table>
+      <thead><tr><th>Provider</th><th>What is sent</th><th>Purpose</th><th>Policy</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>OpenAI</td>
+          <td>Extracted audio, transcript text</td>
+          <td>Transcription (Whisper) and translation (GPT)</td>
+          <td><a href="https://openai.com/policies/privacy-policy">openai.com/policies/privacy-policy</a></td>
+        </tr>
+        <tr>
+          <td>ElevenLabs</td>
+          <td>Voice sample, translated text</td>
+          <td>Voice cloning and TTS synthesis</td>
+          <td><a href="https://elevenlabs.io/privacy-policy">elevenlabs.io/privacy-policy</a></td>
+        </tr>
+        <tr>
+          <td>TikTok</td>
+          <td>OAuth tokens, dubbed MP4</td>
+          <td>Authentication and draft upload</td>
+          <td><a href="https://www.tiktok.com/legal/privacy-policy">tiktok.com/legal/privacy-policy</a></td>
+        </tr>
+        <tr>
+          <td>Supabase</td>
+          <td>Account, job metadata, token records, generated files</td>
+          <td>Database, storage, authentication</td>
+          <td><a href="https://supabase.com/privacy">supabase.com/privacy</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>These providers are located in the United States and the European Union. Transfers outside the EEA rely on Standard Contractual Clauses where applicable.</p>
+
+    <h2>6. Data retention</h2>
+    <ul>
+      <li><strong>Account data:</strong> kept until you delete your account.</li>
+      <li><strong>TikTok tokens:</strong> kept until you disconnect TikTok from the Service or revoke access at <a href="https://www.tiktok.com/setting/manage-app-permissions">tiktok.com/setting/manage-app-permissions</a>.</li>
+      <li><strong>Job artefacts</strong> (downloaded videos, transcripts, audio, MP4): kept for up to 30 days, then deleted automatically.</li>
+      <li><strong>Operational logs:</strong> kept for up to 90 days.</li>
+    </ul>
+
+    <h2>7. Your rights</h2>
+    <p>Under the GDPR and similar laws you have the right to:</p>
+    <ul>
+      <li>access the personal information we hold about you;</li>
+      <li>request correction of inaccurate data;</li>
+      <li>request deletion of your data ("right to be forgotten");</li>
+      <li>request restriction of processing;</li>
+      <li>data portability;</li>
+      <li>withdraw consent at any time (e.g. by disconnecting TikTok);</li>
+      <li>lodge a complaint with your local data protection authority.</li>
+    </ul>
+    <p>To exercise any of these rights, email <a href="mailto:btorjea@gmail.com">btorjea@gmail.com</a>. We will respond within 30 days.</p>
+
+    <h2>8. Account and data deletion</h2>
+    <p>You can:</p>
+    <ul>
+      <li>disconnect TikTok at any time from the Service settings (deletes stored TikTok tokens);</li>
+      <li>revoke access from TikTok directly at <a href="https://www.tiktok.com/setting/manage-app-permissions">tiktok.com/setting/manage-app-permissions</a>;</li>
+      <li>request full account deletion by emailing <a href="mailto:btorjea@gmail.com">btorjea@gmail.com</a> &mdash; all account data, tokens, and job artefacts are permanently deleted within 30 days.</li>
+    </ul>
+
+    <h2>9. Security</h2>
+    <p>API keys, OAuth tokens, and uploaded files are stored in Supabase with row-level security so that each user can only access their own data. Connections to all third-party APIs use TLS. No security system is perfect — please use a strong, unique password and notify us immediately if you suspect unauthorised access.</p>
+
+    <h2>10. Children</h2>
+    <p>The Service is not directed to anyone under 18 and we do not knowingly collect data from minors. If you believe a minor has provided us with personal information, contact us and we will delete it.</p>
+
+    <h2>11. Changes to this Policy</h2>
+    <p>We may update this Privacy Policy from time to time. The "Last updated" date will reflect the most recent revision. Material changes will be announced in-app or by email where appropriate.</p>
+
+    <h2>12. Contact</h2>
+    <p>Questions, complaints, or data requests: <a href="mailto:btorjea@gmail.com">btorjea@gmail.com</a></p>
+  </main>
+
+  <footer>
+    &copy; 2026 Translator &middot; <a href="terms.html">Terms</a> &middot; <a href="privacy.html">Privacy</a>
+  </footer>
 </body>
 </html>
